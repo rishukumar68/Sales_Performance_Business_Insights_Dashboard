@@ -1,0 +1,14 @@
+Create a Date table in Power BI if desired and mark it as a date table. The following measures assume the imported table is named clean_sales and has Revenue, InvoiceNo, CustomerID, Quantity, and InvoiceDate columns.
+
+Total Revenue = SUM(clean_sales[Revenue])
+Total Orders = DISTINCTCOUNT(clean_sales[InvoiceNo])
+Units Sold = SUM(clean_sales[Quantity])
+Known Customers = DISTINCTCOUNT(clean_sales[CustomerID])
+Average Order Value = DIVIDE([Total Revenue], [Total Orders])
+Revenue per Known Customer = DIVIDE([Total Revenue], [Known Customers])
+
+Monthly Revenue = [Total Revenue]
+Previous Month Revenue = CALCULATE([Total Revenue], DATEADD('Date'[Date], -1, MONTH))
+MoM Revenue Change % = DIVIDE([Total Revenue] - [Previous Month Revenue], [Previous Month Revenue])
+
+If not using a Date table, use a YearMonth column from the Python output for the monthly trend. Format revenue measures as GBP (£), order/customer counts as whole numbers, and MoM change as percentage.

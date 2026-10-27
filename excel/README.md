@@ -1,0 +1,1 @@
+Run `python src/build_excel_report.py` after `python src/analyze_sales.py` to generate the Excel summary workbook. It includes KPI summary, monthly KPIs, top products, country performance, and charts. For PivotTables, use Excel Insert → PivotTable on the exported `clean_sales.csv` table.

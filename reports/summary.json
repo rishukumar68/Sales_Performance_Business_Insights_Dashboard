@@ -1,0 +1,22 @@
+{
+  "data_source":"UCI Online Retail dataset",
+  "source":"UCI Online Retail dataset",
+  "rows_loaded":541909,
+  "duplicate_rows":5268,
+  "missing_customer_id":135080,
+  "missing_description":1454,
+  "rows_after_dedup_and_required_fields":535187,
+  "valid_positive_sales_rows":524878,
+  "cancellation_rows":9251,
+  "unique_invoices":19960,
+  "unique_products":3922,
+  "unique_customers_known":4338,
+  "countries":38,
+  "sales_revenue_gbp":10642110.8000000007,
+  "net_sales_gbp":10642110.8000000007,
+  "average_order_value_gbp":533.17,
+  "top_product_by_revenue":"DOTCOM POSTAGE",
+  "top_country_by_revenue":"United Kingdom",
+  "analysis_period_start":"2010-12-01",
+  "analysis_period_end":"2011-12-09"
+}
